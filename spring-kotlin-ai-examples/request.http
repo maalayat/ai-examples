@@ -1,0 +1,6 @@
+### GET movie information given its name
+GET http://localhost:8080/ai/movies?name=Interstellar
+#GET http://localhost:8080/ai/movies?name=El+Señor+de+los+Anillos
+
+###
+
