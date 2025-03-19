@@ -25,11 +25,31 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
+
+	// Ollama
 	implementation("org.springframework.ai:spring-ai-ollama-spring-boot-starter")
+
+	// Pgvector
+	implementation("org.springframework.ai:spring-ai-pgvector-store-spring-boot-starter")
+
+	// Document Reader
 	implementation("org.springframework.ai:spring-ai-pdf-document-reader")
 	implementation("org.springframework.ai:spring-ai-tika-document-reader")
+
+	// Docker
+	developmentOnly("org.springframework.boot:spring-boot-docker-compose")
+	developmentOnly("org.springframework.ai:spring-ai-spring-boot-docker-compose")
+
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
+
+	// Testcontainers
+	testImplementation("org.springframework.boot:spring-boot-testcontainers")
+	testImplementation("org.springframework.ai:spring-ai-spring-boot-testcontainers")
+	testImplementation("org.testcontainers:junit-jupiter")
+	testImplementation("org.testcontainers:ollama")
+	testImplementation("org.testcontainers:postgresql")
+
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
