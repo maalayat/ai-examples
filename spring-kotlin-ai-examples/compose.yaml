@@ -2,7 +2,9 @@ services:
   ollama:
     image: 'ollama/ollama:latest'
     ports:
-      - '11434'
+      - '11434:11434'
+    environment:
+      - 'OLLAMA_MODELS=mistral:latest nomic-embed-text:latest'
   pgvector:
     image: 'pgvector/pgvector:pg16'
     environment:

@@ -4,7 +4,8 @@
 
 ## Run
 
-1. You need to have ollama installed in your machine with Mistral model (or others).
+1. You need to have docker and docker-compose installed.
+2. `docker-compose -f compose.yaml up`
 2. `./gradlew bootRun`
 3. `curl http://localhost:8080/ai/movies\?name\=Interstellar`
 
