@@ -18,9 +18,9 @@ class VectorStoreTest {
 
 	@ParameterizedTest
 	@ValueSource(strings = ["¿Qué es la Real Audiencia de Quito?"])
-	fun whenSearchingShakespeareTheme_thenRelevantPoemsReturned(theme: String) {
+	fun whenSearchingEcuadorTheme_thenRelevantInformationReturned(question: String) {
 		val searchRequest = SearchRequest.builder()
-			.query(theme)
+			.query(question)
 			.topK(3)
 			.build()
 		val documents = vectorStore.similaritySearch(searchRequest)

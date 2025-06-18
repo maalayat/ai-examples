@@ -16,6 +16,6 @@ class GetAiController(private val movieService: MovieService) {
         @RequestParam(value = "name", defaultValue = "Interstellar")
         movieName: String
     ): Movie {
-        return movieService.getMovieInformation(movieName)
+        return movieService.getMovieInformationWithEntity(movieName)
     }
 }

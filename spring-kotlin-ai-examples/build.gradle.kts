@@ -1,7 +1,7 @@
 plugins {
 	kotlin("jvm") version "1.9.25"
 	kotlin("plugin.spring") version "1.9.25"
-	id("org.springframework.boot") version "3.4.3"
+	id("org.springframework.boot") version "3.5.0"
 	id("io.spring.dependency-management") version "1.1.7"
 }
 
@@ -18,7 +18,7 @@ repositories {
 	mavenCentral()
 }
 
-extra["springAiVersion"] = "1.0.0-M6"
+extra["springAiVersion"] = "1.0.0"
 
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-actuator")
@@ -27,10 +27,11 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 
 	// Ollama
-	implementation("org.springframework.ai:spring-ai-ollama-spring-boot-starter")
+	implementation("org.springframework.ai:spring-ai-starter-model-ollama")
 
 	// Pgvector
-	implementation("org.springframework.ai:spring-ai-pgvector-store-spring-boot-starter")
+	implementation("org.springframework.ai:spring-ai-advisors-vector-store")
+	implementation("org.springframework.ai:spring-ai-starter-vector-store-pgvector")
 
 	// Document Reader
 	implementation("org.springframework.ai:spring-ai-pdf-document-reader")
