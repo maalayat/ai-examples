@@ -5,6 +5,8 @@ A simple Kotlin server example using the Model Context Protocol (MCP) SDK.
 ## Features
 
 - Implements a basic MCP server with a custom tool (`fetch-weather`)
+- Fetches real weather data for a given city using the Open-Meteo API
+- Uses geocoding to resolve city names to coordinates
 - Uses [io.modelcontextprotocol:kotlin-sdk](https://github.com/modelcontextprotocol/kotlin-sdk)
 - Built with Gradle and Kotlin JVM
 
@@ -38,4 +40,4 @@ npx @modelcontextprotocol/inspector
 ```
 
 ## Example
-The server exposes a tool called `fetch-weather` that returns a mock weather response for a given city.
+The server exposes a tool called `fetch-weather` that returns the current weather for a given city using real data from Open-Meteo.
